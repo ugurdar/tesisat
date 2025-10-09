@@ -1,0 +1,511 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { 
+  color-scheme: light dark;
+  --brand-50: #f0f8ff;
+  --brand-100: #e0f2ff;
+  --brand-200: #bae6fd;
+  --brand-300: #7dd3fc;
+  --brand-400: #38bdf8;
+  --brand-500: #0ea5e9;
+  --brand-600: #0284c7;
+  --brand-700: #0369a1;
+  --brand-800: #075985;
+  --brand-900: #0c4a6e;
+}
+
+/* Basit tipografi ve layout */
+body { 
+  @apply antialiased text-slate-800 dark:text-slate-100 bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container { 
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl; 
+}
+
+.prose h1, .prose h2, .prose h3 { 
+  @apply scroll-mt-24; 
+}
+
+/* Hero gradient geliştirildi */
+.hero-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1), transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.1), transparent 50%),
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* Dark mode hero */
+.dark .hero-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1), transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.1), transparent 50%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Grid patterns */
+.services-grid {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(14, 165, 233, 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-900;
+}
+
+/* Loading states */
+.loading {
+  @apply animate-pulse;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+/* Text selection */
+::selection {
+  background-color: rgba(14, 165, 233, 0.2);
+  color: inherit;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Gelişmiş animasyonlar */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes gradient-x-reverse {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes button-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(14, 165, 233, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave-1 {
+  0%, 100% {
+    d: path("M0,100 C300,200 400,0 600,100 C800,200 900,0 1200,100 L1200,200 L0,200 Z");
+  }
+  50% {
+    d: path("M0,50 C300,150 400,50 600,150 C800,50 900,150 1200,50 L1200,200 L0,200 Z");
+  }
+}
+
+@keyframes wave-2 {
+  0%, 100% {
+    d: path("M0,150 C400,50 500,250 800,150 C900,100 1000,200 1200,150 L1200,200 L0,200 Z");
+  }
+  50% {
+    d: path("M0,100 C400,0 500,200 800,100 C900,150 1000,50 1200,100 L1200,200 L0,200 Z");
+  }
+}
+
+@keyframes wave-3 {
+  0%, 100% {
+    d: path("M0,120 C200,20 600,220 900,120 C1000,70 1100,170 1200,120 L1200,200 L0,200 Z");
+  }
+  50% {
+    d: path("M0,180 C200,80 600,280 900,180 C1000,130 1100,230 1200,180 L1200,200 L0,200 Z");
+  }
+}
+
+@keyframes float-random {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) translateX(10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-15px) translateX(-15px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-25px) translateX(20px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(360deg);
+  }
+}
+
+@keyframes pulse-geometric {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes ring {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes wrench {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Animasyon sınıfları */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease-in-out infinite;
+}
+
+.animate-gradient-x-reverse {
+  animation: gradient-x-reverse 3s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  background: linear-gradient(90deg, #334155, #0ea5e9, #334155);
+  background-size: 200% 100%;
+  animation: text-shimmer 2s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.animate-button-glow {
+  animation: button-glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-wave-1 {
+  animation: wave-1 6s ease-in-out infinite;
+}
+
+.animate-wave-2 {
+  animation: wave-2 8s ease-in-out infinite reverse;
+}
+
+.animate-wave-3 {
+  animation: wave-3 10s ease-in-out infinite;
+}
+
+.animate-float-random {
+  animation: float-random 12s ease-in-out infinite;
+}
+
+.animate-pulse-geometric {
+  animation: pulse-geometric 4s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.animate-ring {
+  animation: ring 0.5s ease-in-out;
+}
+
+.animate-wrench {
+  animation: wrench 0.8s ease-in-out;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+  
+  /* Hero responsive */
+  .hero-title {
+    font-size: 1.875rem;
+    line-height: 1.25;
+  }
+  
+  /* Button responsive */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Reduce animations on mobile */
+  .animate-orbit {
+    animation: none;
+    position: static !important;
+    transform: none !important;
+  }
+  
+  /* Hide orbit animation on mobile */
+  .lg\\:block {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Grid adjustments */
+  .grid.gap-8.sm\\:grid-cols-2.lg\\:grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .grid.md\\:grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Font size adjustments */
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.375;
+  }
+}
+
+/* Accessibility - prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-gradient-x,
+  .animate-gradient-x-reverse,
+  .animate-text-shimmer,
+  .animate-button-glow,
+  .animate-pulse-glow,
+  .animate-pulse-ring,
+  .animate-orbit,
+  .animate-float,
+  .animate-float-gentle,
+  .animate-spin-slow,
+  .animate-wave-1,
+  .animate-wave-2,
+  .animate-ring,
+  .animate-wrench {
+    animation: none !important;
+  }
+  
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
