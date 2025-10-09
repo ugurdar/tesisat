@@ -174,18 +174,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="tr" className="dark" style={{ colorScheme: 'dark' }}>
+    <html lang="tr" className="dark">
       <head>
         <script src="/dark-mode-init.js" />
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            html { color-scheme: dark !important; }
-            body { color-scheme: dark !important; }
-            * { color-scheme: dark !important; }
-          `
-        }} />
       </head>
-      <body className="dark" style={{ colorScheme: 'dark' }}>
+      <body className="dark">
         <IconDefs />
         <Navbar />
         <main>{children}</main>

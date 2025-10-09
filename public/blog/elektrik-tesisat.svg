@@ -1,174 +1,38 @@
-<!-- Modern Elektrik Tesisatı -->
-<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fefce8"/>
-      <stop offset="100%" style="stop-color:#fef3c7"/>
-    </linearGradient>
-    <linearGradient id="panel3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#374151"/>
-      <stop offset="50%" style="stop-color:#4b5563"/>
-      <stop offset="100%" style="stop-color:#1f2937"/>
-    </linearGradient>
-    <linearGradient id="copper3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ea580c"/>
-      <stop offset="50%" style="stop-color:#fb923c"/>
-      <stop offset="100%" style="stop-color:#c2410c"/>
-    </linearGradient>
-    <radialGradient id="energy3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#fbbf24"/>
-      <stop offset="70%" style="stop-color:#f59e0b"/>
-      <stop offset="100%" style="stop-color:#d97706"/>
-    </radialGradient>
-    <filter id="shadow3" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="3" dy="6" stdDeviation="10" flood-opacity="0.25"/>
-    </filter>
-    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1e293b"/>
   
-  <!-- Professional background -->
-  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- Main Container -->
+  <rect x="50" y="60" width="300" height="180" rx="12" fill="#334155" stroke="#475569" stroke-width="2"/>
   
-  <!-- Modern electrical panel -->
-  <g filter="url(#shadow3)">
-    <rect x="80" y="120" width="220" height="320" rx="15" fill="url(#panel3)" stroke="#1f2937" stroke-width="3"/>
-    <rect x="95" y="135" width="190" height="290" rx="10" fill="#4b5563"/>
-    
-    <!-- Digital display -->
-    <rect x="110" y="150" width="160" height="40" rx="5" fill="#000000"/>
-    <text x="190" y="175" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="16" font-weight="bold">380V - 50Hz</text>
-    
-    <!-- Modern circuit breakers -->
-    <g fill="#6b7280" stroke="#374151" stroke-width="1">
-      <rect x="120" y="210" width="35" height="50" rx="3"/>
-      <rect x="165" y="210" width="35" height="50" rx="3"/>
-      <rect x="210" y="210" width="35" height="50" rx="3"/>
-      <rect x="255" y="210" width="35" height="50" rx="3"/>
-      
-      <rect x="120" y="270" width="35" height="50" rx="3"/>
-      <rect x="165" y="270" width="35" height="50" rx="3"/>
-      <rect x="210" y="270" width="35" height="50" rx="3"/>
-      <rect x="255" y="270" width="35" height="50" rx="3"/>
-      
-      <rect x="120" y="330" width="35" height="50" rx="3"/>
-      <rect x="165" y="330" width="35" height="50" rx="3"/>
-      <rect x="210" y="330" width="35" height="50" rx="3"/>
-      <rect x="255" y="330" width="35" height="50" rx="3"/>
-    </g>
-    
-    <!-- Status indicators -->
-    <circle cx="137" cy="220" r="4" fill="#22c55e"/>
-    <circle cx="182" cy="220" r="4" fill="#22c55e"/>
-    <circle cx="227" cy="220" r="4" fill="#ef4444"/>
-    <circle cx="272" cy="220" r="4" fill="#22c55e"/>
-    
-    <!-- Labels -->
-    <text x="137" y="395" text-anchor="middle" fill="#d1d5db" font-size="8" font-weight="600">MUTFAK</text>
-    <text x="182" y="395" text-anchor="middle" fill="#d1d5db" font-size="8" font-weight="600">SALON</text>
-    <text x="227" y="395" text-anchor="middle" fill="#d1d5db" font-size="8" font-weight="600">BANYO</text>
-    <text x="272" y="395" text-anchor="middle" fill="#d1d5db" font-size="8" font-weight="600">YATAK</text>
-  </g>
+  <!-- Electrical Panel -->
+  <rect x="80" y="100" width="80" height="100" rx="6" fill="#475569" stroke="#64748b" stroke-width="2"/>
   
-  <!-- Professional cable management -->
-  <g>
-    <!-- Conduits -->
-    <rect x="320" y="200" width="300" height="12" rx="6" fill="#9ca3af"/>
-    <rect x="320" y="220" width="300" height="12" rx="6" fill="#9ca3af"/>
-    <rect x="320" y="240" width="300" height="12" rx="6" fill="#9ca3af"/>
-    
-    <!-- High-quality cables -->
-    <path d="M 300 230 Q 350 210 400 230 Q 450 250 500 230 Q 550 210 600 230" 
-          stroke="url(#copper3)" stroke-width="6" fill="none"/>
-    <path d="M 300 250 Q 350 230 400 250 Q 450 270 500 250 Q 550 230 600 250" 
-          stroke="#3b82f6" stroke-width="6" fill="none"/>
-    <path d="M 300 270 Q 350 250 400 270 Q 450 290 500 270 Q 550 250 600 270" 
-          stroke="#22c55e" stroke-width="6" fill="none"/>
-  </g>
+  <!-- Circuit Breakers -->
+  <rect x="90" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="105" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="120" y="115" width="12" height="15" rx="2" fill="#ef4444"/>
+  <rect x="135" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
   
-  <!-- Smart home integration -->
-  <g filter="url(#shadow3)">
-    <!-- Smart switch -->
-    <rect x="650" y="200" width="80" height="120" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-    <rect x="660" y="210" width="60" height="30" rx="4" fill="#1f2937"/>
-    <text x="690" y="230" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="600">SMART</text>
-    <circle cx="690" cy="260" r="15" fill="#3b82f6"/>
-    <rect x="680" y="290" width="20" height="20" rx="3" fill="#f3f4f6" stroke="#d1d5db"/>
-  </g>
+  <rect x="90" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="105" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="120" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="135" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
   
-  <!-- Premium outlets -->
-  <g filter="url(#shadow3)">
-    <rect x="500" y="350" width="80" height="100" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-    <!-- USB ports -->
-    <rect x="515" y="370" width="15" height="8" rx="2" fill="#374151"/>
-    <rect x="535" y="370" width="15" height="8" rx="2" fill="#374151"/>
-    <rect x="555" y="370" width="15" height="8" rx="2" fill="#374151"/>
-    
-    <!-- Power outlets -->
-    <circle cx="525" cy="400" r="10" fill="#374151"/>
-    <circle cx="555" cy="400" r="10" fill="#374151"/>
-    <rect x="535" y="420" width="10" height="20" rx="2" fill="#374151"/>
-  </g>
+  <!-- Wires -->
+  <path d="M 180 120 Q 220 110 250 120" stroke="#fbbf24" stroke-width="3" fill="none"/>
+  <path d="M 180 140 Q 220 130 250 140" stroke="#fbbf24" stroke-width="3" fill="none"/>
   
-  <!-- LED lighting system -->
-  <g filter="url(#glow3)">
-    <ellipse cx="200" cy="50" rx="60" ry="15" fill="url(#energy3)" opacity="0.8"/>
-    <ellipse cx="400" cy="50" rx="60" ry="15" fill="url(#energy3)" opacity="0.8"/>
-    <ellipse cx="600" cy="50" rx="60" ry="15" fill="url(#energy3)" opacity="0.8"/>
-    
-    <!-- Light fixture -->
-    <rect x="380" y="60" width="40" height="20" rx="10" fill="#e5e7eb"/>
-    <rect x="385" y="65" width="30" height="10" rx="5" fill="#f9fafb"/>
-  </g>
+  <!-- Outlet -->
+  <rect x="270" y="130" width="30" height="20" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <circle cx="280" cy="137" r="2" fill="#374151"/>
+  <circle cx="290" cy="137" r="2" fill="#374151"/>
   
-  <!-- Professional measuring equipment -->
-  <g transform="translate(650, 350)">
-    <rect x="0" y="0" width="100" height="80" rx="8" fill="#1f2937"/>
-    <rect x="10" y="10" width="80" height="50" rx="4" fill="#000000"/>
-    <text x="50" y="40" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="12" font-weight="bold">
-      230.5V
-    </text>
-    <text x="50" y="75" text-anchor="middle" fill="#d1d5db" font-size="8" font-weight="600">
-      FLUKE 87V
-    </text>
-  </g>
+  <!-- Light Bulb -->
+  <circle cx="310" cy="95" r="8" fill="#fbbf24" opacity="0.8"/>
+  <rect x="307" y="103" width="6" height="8" rx="1" fill="#94a3b8"/>
   
-  <!-- Professional tools -->
-  <g transform="translate(50, 480)">
-    <!-- Wire strippers -->
-    <rect x="0" y="0" width="80" height="12" rx="6" fill="#ef4444"/>
-    <rect x="80" y="-4" width="25" height="20" rx="3" fill="#6b7280"/>
-    
-    <!-- Voltage tester -->
-    <rect x="120" y="-5" width="8" height="60" rx="4" fill="#fbbf24"/>
-    <circle cx="124" cy="5" r="6" fill="#ef4444"/>
-    <text x="124" y="70" text-anchor="middle" fill="#374151" font-size="8" font-weight="600">NON-CONTACT</text>
-    
-    <!-- Cable -->
-    <path d="M 150 20 Q 180 10 200 25 Q 220 15 250 20" stroke="url(#copper3)" stroke-width="8" fill="none"/>
-  </g>
-  
-  <!-- Safety warnings -->
-  <g transform="translate(720, 80)">
-    <polygon points="30,5 55,45 5,45" fill="#ef4444" stroke="#dc2626" stroke-width="3"/>
-    <path d="M 30 15 L 30 30 M 30 35 L 30 38" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-  </g>
-  
-  <!-- Energy efficiency indicator -->
-  <g transform="translate(50, 80)">
-    <rect x="0" y="0" width="60" height="100" rx="8" fill="#22c55e" opacity="0.8"/>
-    <text x="30" y="25" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">A++</text>
-    <text x="30" y="45" text-anchor="middle" fill="#ffffff" font-size="8">ENERGY</text>
-    <text x="30" y="60" text-anchor="middle" fill="#ffffff" font-size="8">CLASS</text>
-  </g>
-  
-  <!-- Professional certification -->
-  <text x="400" y="580" text-anchor="middle" fill="#d97706" font-family="system-ui" font-size="14" font-weight="700" opacity="0.9">
-    CERTIFIED ELECTRICAL INSTALLATION
-  </text>
+  <!-- Title -->
+  <text x="200" y="35" fill="#e2e8f0" font-size="24" font-weight="bold" text-anchor="middle">ELEKTRİK TESİSATI</text>
+  <text x="200" y="50" fill="#94a3b8" font-size="12" text-anchor="middle">Güvenli Elektrik Çözümleri</text>
 </svg>

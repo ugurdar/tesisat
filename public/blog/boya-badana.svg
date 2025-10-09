@@ -1,187 +1,34 @@
-<!-- Professional Boya Badana -->
-<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fefefe"/>
-      <stop offset="100%" style="stop-color:#f8fafc"/>
-    </linearGradient>
-    <linearGradient id="wall4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#e2e8f0"/>
-      <stop offset="30%" style="stop-color:#0ea5e9"/>
-      <stop offset="70%" style="stop-color:#38bdf8"/>
-      <stop offset="100%" style="stop-color:#0284c7"/>
-    </linearGradient>
-    <linearGradient id="paint4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0ea5e9"/>
-      <stop offset="50%" style="stop-color:#38bdf8"/>
-      <stop offset="100%" style="stop-color:#0284c7"/>
-    </linearGradient>
-    <linearGradient id="wood4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#92400e"/>
-      <stop offset="50%" style="stop-color:#a16207"/>
-      <stop offset="100%" style="stop-color:#78350f"/>
-    </linearGradient>
-    <filter id="shadow4" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="2" dy="4" stdDeviation="8" flood-opacity="0.2"/>
-    </filter>
-    <filter id="texture4" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence baseFrequency="0.9" numOctaves="4" result="noise"/>
-      <feColorMatrix in="noise" type="saturate" values="0"/>
-      <feComponentTransfer result="monoNoise">
-        <feFuncA type="discrete" tableValues="0.1 0.15 0.2"/>
-      </feComponentTransfer>
-      <feComposite in="SourceGraphic" in2="monoNoise" operator="multiply"/>
-    </filter>
-  </defs>
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1e293b"/>
   
-  <!-- Clean studio background -->
-  <rect width="800" height="600" fill="url(#bg4)"/>
+  <!-- Main Container -->
+  <rect x="50" y="60" width="300" height="180" rx="12" fill="#334155" stroke="#475569" stroke-width="2"/>
   
-  <!-- Professional wall preparation -->
-  <g filter="url(#shadow4)">
-    <rect x="120" y="80" width="560" height="420" rx="8" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
-    
-    <!-- Paint progress gradient -->
-    <rect x="120" y="80" width="280" height="420" rx="8" fill="url(#wall4)"/>
-    
-    <!-- Professional paint line -->
-    <rect x="395" y="80" width="8" height="420" fill="#1f2937" opacity="0.1"/>
-    
-    <!-- Primer base visible -->
-    <rect x="400" y="80" width="280" height="420" rx="8" fill="#f1f5f9"/>
-  </g>
+  <!-- Paint Brush -->
+  <rect x="80" y="110" width="6" height="40" fill="#8b4513" rx="1"/>
+  <rect x="76" y="150" width="14" height="25" fill="#fbbf24" rx="3"/>
+  <path d="M 78 175 Q 90 185 102 175" fill="#0ea5e9" opacity="0.8"/>
   
-  <!-- Professional painting tools setup -->
-  <g filter="url(#shadow4)">
-    <!-- Premium paint bucket -->
-    <ellipse cx="200" cy="540" rx="80" ry="25" fill="#374151"/>
-    <rect x="120" y="500" width="160" height="40" rx="8" fill="#4b5563"/>
-    <rect x="130" y="510" width="140" height="20" fill="url(#paint4)"/>
-    
-    <!-- Bucket handle -->
-    <path d="M 120 515 Q 80 495 80 515 Q 80 535 120 515" fill="none" stroke="#6b7280" stroke-width="6"/>
-    <path d="M 280 515 Q 320 495 320 515 Q 320 535 280 515" fill="none" stroke="#6b7280" stroke-width="6"/>
-  </g>
+  <!-- Paint Roller -->
+  <rect x="140" y="120" width="40" height="10" fill="#94a3b8" rx="5"/>
+  <rect x="155" y="130" width="4" height="30" fill="#8b4513" rx="1"/>
+  <path d="M 145 115 Q 160 105 175 115" stroke="#0ea5e9" stroke-width="3" fill="none" opacity="0.7"/>
   
-  <!-- Professional brush technique -->
-  <g transform="translate(350, 250) rotate(15)" filter="url(#shadow4)">
-    <!-- Premium brush handle -->
-    <rect x="0" y="0" width="150" height="16" rx="8" fill="url(#wood4)"/>
-    <rect x="10" y="3" width="130" height="10" rx="5" fill="#a16207"/>
-    
-    <!-- Chrome ferrule -->
-    <rect x="150" y="-4" width="30" height="24" rx="4" fill="#e5e7eb"/>
-    <rect x="155" y="-2" width="20" height="20" rx="2" fill="#f9fafb"/>
-    
-    <!-- High-quality bristles -->
-    <rect x="180" y="2" width="60" height="12" rx="2" fill="#374151"/>
-    
-    <!-- Individual bristles -->
-    <g stroke="#1f2937" stroke-width="1.5" opacity="0.8">
-      <line x1="190" y1="14" x2="188" y2="26"/>
-      <line x1="195" y1="14" x2="193" y2="28"/>
-      <line x1="200" y1="14" x2="198" y2="25"/>
-      <line x1="205" y1="14" x2="203" y2="27"/>
-      <line x1="210" y1="14" x2="208" y2="26"/>
-      <line x1="215" y1="14" x2="213" y2="29"/>
-      <line x1="220" y1="14" x2="218" y2="24"/>
-      <line x1="225" y1="14" x2="223" y2="28"/>
-      <line x1="230" y1="14" x2="228" y2="26"/>
-    </g>
-    
-    <!-- Paint loading on brush -->
-    <ellipse cx="210" cy="18" rx="12" ry="4" fill="url(#paint4)" opacity="0.9"/>
-  </g>
+  <!-- Paint Bucket -->
+  <rect x="220" y="150" width="30" height="35" fill="#475569" rx="3"/>
+  <rect x="222" y="152" width="26" height="20" fill="#0ea5e9"/>
   
-  <!-- Professional roller system -->
-  <g transform="translate(500, 380)" filter="url(#shadow4)">
-    <!-- Ergonomic handle -->
-    <rect x="0" y="0" width="120" height="12" rx="6" fill="url(#wood4)"/>
-    <rect x="5" y="2" width="110" height="8" rx="4" fill="#a16207"/>
-    
-    <!-- Professional frame -->
-    <rect x="120" y="-8" width="20" height="28" rx="4" fill="#6b7280"/>
-    <rect x="125" y="-6" width="10" height="24" rx="2" fill="#9ca3af"/>
-    
-    <!-- High-nap roller -->
-    <rect x="140" y="-12" width="80" height="36" rx="18" fill="#f3f4f6"/>
-    <rect x="145" y="-10" width="70" height="32" rx="16" fill="#e5e7eb" filter="url(#texture4)"/>
-    
-    <!-- Paint coverage -->
-    <rect x="145" y="-10" width="70" height="12" rx="6" fill="url(#paint4)" opacity="0.8"/>
-  </g>
+  <!-- Wall -->
+  <rect x="280" y="100" width="50" height="80" fill="#64748b" stroke="#475569" stroke-width="1"/>
+  <rect x="280" y="100" width="25" height="80" fill="#0ea5e9" opacity="0.6"/>
   
-  <!-- Professional paint tray -->
-  <g transform="translate(520, 450)" filter="url(#shadow4)">
-    <ellipse cx="0" cy="0" rx="100" ry="30" fill="#6b7280"/>
-    <ellipse cx="0" cy="-5" rx="95" ry="25" fill="#9ca3af"/>
-    
-    <!-- Paint reservoir -->
-    <ellipse cx="-30" cy="-5" rx="50" ry="20" fill="url(#paint4)"/>
-    
-    <!-- Textured loading area -->
-    <rect x="20" y="-15" width="60" height="20" rx="10" fill="#d1d5db"/>
-    <g stroke="#9ca3af" stroke-width="1" opacity="0.6">
-      <line x1="25" y1="-10" x2="75" y2="-10"/>
-      <line x1="25" y1="-5" x2="75" y2="-5"/>
-      <line x1="25" y1="0" x2="75" y2="0"/>
-    </g>
-  </g>
+  <!-- Paint Drops -->
+  <circle cx="120" cy="180" r="2" fill="#0ea5e9" opacity="0.8"/>
+  <circle cx="160" cy="185" r="2" fill="#0ea5e9" opacity="0.8"/>
+  <circle cx="200" cy="182" r="2" fill="#0ea5e9" opacity="0.8"/>
   
-  <!-- Professional color matching station -->
-  <g transform="translate(50, 100)" filter="url(#shadow4)">
-    <rect x="0" y="0" width="120" height="150" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
-    <text x="60" y="20" text-anchor="middle" fill="#374151" font-size="12" font-weight="600">COLOR MATCH</text>
-    
-    <!-- Premium color swatches -->
-    <rect x="15" y="30" width="25" height="25" rx="3" fill="#0ea5e9"/>
-    <rect x="50" y="30" width="25" height="25" rx="3" fill="#38bdf8"/>
-    <rect x="85" y="30" width="25" height="25" rx="3" fill="#0284c7"/>
-    
-    <rect x="15" y="65" width="25" height="25" rx="3" fill="#ef4444"/>
-    <rect x="50" y="65" width="25" height="25" rx="3" fill="#f97316"/>
-    <rect x="85" y="65" width="25" height="25" rx="3" fill="#eab308"/>
-    
-    <rect x="15" y="100" width="25" height="25" rx="3" fill="#22c55e"/>
-    <rect x="50" y="100" width="25" height="25" rx="3" fill="#8b5cf6"/>
-    <rect x="85" y="100" width="25" height="25" rx="3" fill="#ec4899"/>
-    
-    <!-- Quality indicators -->
-    <text x="60" y="140" text-anchor="middle" fill="#6b7280" font-size="8">PREMIUM QUALITY</text>
-  </g>
-  
-  <!-- Professional ladder -->
-  <g transform="translate(50, 200)" filter="url(#shadow4)">
-    <rect x="0" y="0" width="8" height="300" rx="4" fill="#a16207"/>
-    <rect x="32" y="0" width="8" height="300" rx="4" fill="#a16207"/>
-    
-    <!-- Anti-slip rungs -->
-    <rect x="-5" y="40" width="50" height="6" rx="3" fill="#92400e"/>
-    <rect x="-5" y="80" width="50" height="6" rx="3" fill="#92400e"/>
-    <rect x="-5" y="120" width="50" height="6" rx="3" fill="#92400e"/>
-    <rect x="-5" y="160" width="50" height="6" rx="3" fill="#92400e"/>
-    <rect x="-5" y="200" width="50" height="6" rx="3" fill="#92400e"/>
-    <rect x="-5" y="240" width="50" height="6" rx="3" fill="#92400e"/>
-    
-    <!-- Safety features -->
-    <rect x="5" y="35" width="30" height="4" fill="#fbbf24"/>
-    <rect x="5" y="75" width="30" height="4" fill="#fbbf24"/>
-  </g>
-  
-  <!-- Premium paint drops and texture -->
-  <g opacity="0.6">
-    <circle cx="380" cy="200" r="4" fill="url(#paint4)">
-      <animate attributeName="cy" values="200;520;200" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="420" cy="180" r="3" fill="url(#paint4)">
-      <animate attributeName="cy" values="180;520;180" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  
-  <!-- Professional certification -->
-  <text x="400" y="580" text-anchor="middle" fill="#0284c7" font-family="system-ui" font-size="14" font-weight="700" opacity="0.8">
-    PROFESSIONAL PAINTING SERVICE
-  </text>
+  <!-- Title -->
+  <text x="200" y="35" fill="#e2e8f0" font-size="24" font-weight="bold" text-anchor="middle">BOYA BADANA</text>
+  <text x="200" y="50" fill="#94a3b8" font-size="12" text-anchor="middle">Rengarenk Duvar Boyama</text>
 </svg>
