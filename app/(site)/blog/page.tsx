@@ -73,13 +73,71 @@ export default function Page() {
               className="group bg-slate-800 rounded-2xl border border-slate-700/60 overflow-hidden hover:shadow-xl hover:shadow-slate-900/40 transition-all duration-500 hover:border-brand-700 hover:-translate-y-2"
             >
               <div className="aspect-video bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
-                  className="w-full h-full object-contain"
-                  width={400}
-                  height={300}
-                />
+                {/* Category-based SVG icons */}
+                {post.category === "Banyo Tadilatı" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="80" y="100" width="120" height="60" rx="8" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="2"/>
+                    <rect x="230" y="110" width="80" height="40" rx="6" fill="#e2e8f0" stroke="#cbd5e1" strokeWidth="2"/>
+                    <circle cx="270" cy="130" r="15" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="1"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">BANYO</text>
+                  </svg>
+                )}
+                {post.category === "Mutfak Tadilatı" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="80" y="80" width="240" height="40" rx="4" fill="#8b4513" stroke="#654321" strokeWidth="1"/>
+                    <rect x="80" y="140" width="240" height="15" rx="4" fill="#f1f5f9" stroke="#cbd5e1" strokeWidth="1"/>
+                    <circle cx="200" cy="147" r="12" fill="#e2e8f0" stroke="#94a3b8" strokeWidth="1"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">MUTFAK</text>
+                  </svg>
+                )}
+                {post.category === "Elektrik Tesisatı" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="80" y="90" width="80" height="100" rx="6" fill="#475569" stroke="#64748b" strokeWidth="2"/>
+                    <circle cx="300" cy="100" r="15" fill="#fbbf24"/>
+                    <path d="M 180 130 Q 220 120 250 130" stroke="#fbbf24" strokeWidth="3" fill="none"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">ELEKTRİK</text>
+                  </svg>
+                )}
+                {post.category === "Boya Badana" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="80" y="100" width="6" height="40" fill="#8b4513" rx="1"/>
+                    <rect x="76" y="140" width="14" height="25" fill="#fbbf24" rx="3"/>
+                    <rect x="280" y="90" width="50" height="80" fill="#64748b"/>
+                    <rect x="280" y="90" width="25" height="80" fill="#0ea5e9" opacity="0.6"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">BOYA</text>
+                  </svg>
+                )}
+                {post.category === "Su Tesisatı" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="50" y="120" width="300" height="15" fill="#64748b" rx="7"/>
+                    <rect x="120" y="120" width="10" height="60" fill="#64748b" rx="5"/>
+                    <rect x="200" y="120" width="10" height="60" fill="#64748b" rx="5"/>
+                    <circle cx="125" cy="200" r="3" fill="#0ea5e9"/>
+                    <circle cx="205" cy="200" r="3" fill="#0ea5e9"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">SU TESİSATI</text>
+                  </svg>
+                )}
+                {post.category === "Genel Tadilat" && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="120" y="120" width="160" height="90" rx="6" fill="none" stroke="#94a3b8" strokeWidth="3"/>
+                    <polygon points="120,120 200,80 280,120" stroke="#94a3b8" strokeWidth="3" fill="none"/>
+                    <rect x="120" y="120" width="80" height="90" fill="#0ea5e9" opacity="0.3"/>
+                    <text x="200" y="40" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">TADİLAT</text>
+                  </svg>
+                )}
+                {!["Banyo Tadilatı", "Mutfak Tadilatı", "Elektrik Tesisatı", "Boya Badana", "Su Tesisatı", "Genel Tadilat"].includes(post.category) && (
+                  <svg width="200" height="120" viewBox="0 0 400 300" className="text-slate-300">
+                    <rect width="400" height="300" fill="#334155"/>
+                    <rect x="80" y="90" width="240" height="120" rx="8" fill="#475569" stroke="#64748b" strokeWidth="2"/>
+                    <text x="200" y="160" fill="#e2e8f0" fontSize="24" fontWeight="bold" textAnchor="middle">{post.category}</text>
+                  </svg>
+                )}
               </div>
               
               <div className="p-6">
