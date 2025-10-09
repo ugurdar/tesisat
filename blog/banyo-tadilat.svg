@@ -1,0 +1,28 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1e293b"/>
+  
+  <!-- Main Container -->
+  <rect x="50" y="60" width="300" height="180" rx="12" fill="#334155" stroke="#475569" stroke-width="2"/>
+  
+  <!-- Bathtub -->
+  <rect x="80" y="120" width="120" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="85" y="125" width="110" height="15" rx="4" fill="#0ea5e9" opacity="0.7"/>
+  
+  <!-- Sink -->
+  <rect x="230" y="130" width="80" height="40" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="270" cy="150" r="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  
+  <!-- Faucet -->
+  <rect x="265" y="115" width="10" height="18" rx="2" fill="#64748b"/>
+  
+  <!-- Tiles -->
+  <rect x="80" y="190" width="15" height="15" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <rect x="100" y="190" width="15" height="15" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <rect x="120" y="190" width="15" height="15" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <rect x="140" y="190" width="15" height="15" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="200" y="35" fill="#e2e8f0" font-size="24" font-weight="bold" text-anchor="middle">BANYO TADİLATI</text>
+  <text x="200" y="50" fill="#94a3b8" font-size="12" text-anchor="middle">Modern Banyo Çözümleri</text>
+</svg>

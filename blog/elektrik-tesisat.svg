@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#1e293b"/>
+  
+  <!-- Main Container -->
+  <rect x="50" y="60" width="300" height="180" rx="12" fill="#334155" stroke="#475569" stroke-width="2"/>
+  
+  <!-- Electrical Panel -->
+  <rect x="80" y="100" width="80" height="100" rx="6" fill="#475569" stroke="#64748b" stroke-width="2"/>
+  
+  <!-- Circuit Breakers -->
+  <rect x="90" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="105" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="120" y="115" width="12" height="15" rx="2" fill="#ef4444"/>
+  <rect x="135" y="115" width="12" height="15" rx="2" fill="#94a3b8"/>
+  
+  <rect x="90" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="105" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="120" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  <rect x="135" y="135" width="12" height="15" rx="2" fill="#94a3b8"/>
+  
+  <!-- Wires -->
+  <path d="M 180 120 Q 220 110 250 120" stroke="#fbbf24" stroke-width="3" fill="none"/>
+  <path d="M 180 140 Q 220 130 250 140" stroke="#fbbf24" stroke-width="3" fill="none"/>
+  
+  <!-- Outlet -->
+  <rect x="270" y="130" width="30" height="20" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <circle cx="280" cy="137" r="2" fill="#374151"/>
+  <circle cx="290" cy="137" r="2" fill="#374151"/>
+  
+  <!-- Light Bulb -->
+  <circle cx="310" cy="95" r="8" fill="#fbbf24" opacity="0.8"/>
+  <rect x="307" y="103" width="6" height="8" rx="1" fill="#94a3b8"/>
+  
+  <!-- Title -->
+  <text x="200" y="35" fill="#e2e8f0" font-size="24" font-weight="bold" text-anchor="middle">ELEKTRİK TESİSATI</text>
+  <text x="200" y="50" fill="#94a3b8" font-size="12" text-anchor="middle">Güvenli Elektrik Çözümleri</text>
+</svg>
