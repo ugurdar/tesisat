@@ -50,7 +50,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border-b border-slate-200/60 dark:border-slate-700/60">
+      <div className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900/50 to-slate-800/30 border-b border-slate-700/50">
         {/* Subtle Grid Background */}
         <div className="absolute inset-0 opacity-[0.015] dark:opacity-[0.03]">
           <div 
@@ -232,12 +232,12 @@ export default function HomePage() {
       </div>
 
       {/* Güven unsurları */}
-      <Section className="bg-white dark:bg-slate-950">
+      <Section className="bg-slate-950">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-slate-900 via-brand-700 to-slate-900 dark:from-white dark:via-brand-300 dark:to-white bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white via-brand-300 to-white bg-clip-text text-transparent">
             Neden Bizi Tercih Etmelisiniz?
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          <p className="text-slate-400 max-w-2xl mx-auto">
             Profesyonel ekibimiz ve kaliteli hizmet anlayışımızla güvende hissedeceksiniz.
           </p>
         </div>

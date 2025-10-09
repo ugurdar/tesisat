@@ -5,7 +5,8 @@ export const dynamic = 'force-static';
 export const revalidate = false;
 
 export async function GET() {
-  const posts = BLOG_POSTS;
+  try {
+    const posts = BLOG_POSTS;
   
   const staticPages = [
     "",
@@ -44,4 +45,8 @@ export async function GET() {
       "Content-Type": "application/xml",
     },
   });
+  } catch (error) {
+    console.error('Sitemap generation error:', error);
+    return new Response('Error generating sitemap', { status: 500 });
+  }
 }
