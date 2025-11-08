@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch: {}
 
 # Add permissions for GitHub token
 permissions:
@@ -42,12 +43,18 @@ jobs:
         npx next export -o out
       env:
         NODE_ENV: production
-
+    - name: Ensure 404 fallback (optional)
+      run: |
+        if [ ! -f out/404.html ]; then
+          cp out/index.html out/404.html
+        fi
     - name: Add CNAME
       run: echo 'vetroeskisehirtesisat.com' > out/CNAME
-
-    - name: List output (debug)
-      run: ls -R out | head -n 100
+    - name: Verify export contents
+      run: |
+        test -f out/index.html || (echo "index.html missing" && exit 1)
+        test -d out/_next/static || (echo "_next/static missing" && exit 1)
+        ls -lah out | head -n 50
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
