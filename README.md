@@ -51,6 +51,9 @@ npm run build
 
 # GitHub Pages'e deploy
 npm run deploy
+
+# Projeyi alt dizinde (örn. username.github.io/tesisat) yayınlayacaksanız:
+NEXT_BASE_PATH=tesisat npm run build
 ```
 
 ## 📞 İletişim

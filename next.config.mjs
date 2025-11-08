@@ -5,9 +5,14 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   
-  // Base path GitHub Pages için (repository ismi)
-  basePath: process.env.NODE_ENV === 'production' ? '/tesisat' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/tesisat/' : '',
+  // Base path GitHub Pages proje depoları için isteğe bağlı tutuluyor.
+  // Örn: NEXT_BASE_PATH=/tesisat npm run build
+  basePath: process.env.NEXT_BASE_PATH
+    ? `/${process.env.NEXT_BASE_PATH.replace(/^\/+|\/+$/g, '')}`
+    : '',
+  assetPrefix: process.env.NEXT_BASE_PATH
+    ? `/${process.env.NEXT_BASE_PATH.replace(/^\/+|\/+$/g, '')}/`
+    : undefined,
   
   // Performans optimizasyonları
   images: {
