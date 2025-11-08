@@ -36,11 +36,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build & Export static site
-      run: |
-        npm run build
-        # If using Next.js and export not included in build script:
-        npx next export -o out
+    - name: Build static site
+      run: npm run build
       env:
         NODE_ENV: production
     - name: Ensure 404 fallback (optional)
