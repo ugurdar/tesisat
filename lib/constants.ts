@@ -6,5 +6,5 @@ export const SITE = {
   city: "Eskişehir",
   country: "Türkiye",
   email: "info@eskisehir-tadilat.example",
-  url: "https://ugurdar.github.io/tesisat"
+  url: "https://vetroeskisehirtesisat.com"
 };
