@@ -35,10 +35,19 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build
-      run: npm run build
+    - name: Build & Export static site
+      run: |
+        npm run build
+        # If using Next.js and export not included in build script:
+        npx next export -o out
       env:
         NODE_ENV: production
+
+    - name: Add CNAME
+      run: echo 'vetroeskisehirtesisat.com' > out/CNAME
+
+    - name: List output (debug)
+      run: ls -R out | head -n 100
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
